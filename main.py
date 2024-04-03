@@ -10,7 +10,7 @@ class Solution(object):
     @staticmethod
     def solve():
         meteo_dict = defaultdict(list)
-        fn = r'weather_stations.csv'
+        fn = r'measurements.txt'
         with open(fn, 'r', encoding='utf-8') as file:
             for val in file:
                 try:
