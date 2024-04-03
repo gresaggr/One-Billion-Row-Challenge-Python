@@ -9,6 +9,7 @@ from logger import logger
 class Solution(object):
     @staticmethod
     def solve():
+        round_to = 3
         meteo_dict = defaultdict(list)
         fn = r'measurements.txt'
         with open(fn, 'r', encoding='utf-8') as file:
@@ -25,6 +26,13 @@ class Solution(object):
             # TODO: нужно ли округлять значения?
             # print(f'{meteo_name}: {mean(meteo_list)}, {min(meteo_list)}, {max(meteo_list)}')
             # print(f'{meteo_name}: {mean(numpy.array(meteo_list))}, {min(meteo_list)}, {max(meteo_list)}')
+
+            # если нужно с округлением, то это вариант использовать
+            # print(f'{meteo_name}: '
+            #       f'{round(sum(meteo_list) / len(meteo_list), round_to)}, '
+            #       f'{min(meteo_list)}, '
+            #       f'{max(meteo_list)}')
+
             print(f'{meteo_name}: {sum(meteo_list) / len(meteo_list)}, {min(meteo_list)}, {max(meteo_list)}')
 
 
