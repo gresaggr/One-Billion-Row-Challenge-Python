@@ -1,9 +1,9 @@
-import numpy
-from numpy import mean
+# from numpy import mean
 
-from logger import logger
 import time
 from collections import defaultdict
+
+from logger import logger
 
 
 class Solution(object):
